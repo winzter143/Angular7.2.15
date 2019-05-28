@@ -3,7 +3,7 @@ import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 import { HeroService } from '../hero.service';
 
-import { MessageService } from './message.service';
+//import { MessageService } from './message.service';
 
 @Component({
     selector: 'app-heroes',
@@ -46,7 +46,7 @@ export class HeroesComponent implements OnInit {
 
           // TODO: send the message _after_ fetching the heroes
             // this.messageService.add('HeroService: fetched heroes');
-            // return of(HEROES);          
+            // return of(HEROES);
         }
 
 
