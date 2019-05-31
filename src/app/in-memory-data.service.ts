@@ -6,6 +6,8 @@ import { Hero } from './hero';
   providedIn: 'root',
 })
 export class InMemoryDataService implements InMemoryDbService {
+    //private heroesUrl = 'api/heroes';  // URL to web api
+
   createDb() {
     const heroes = [
       { id: 11, name: 'Mr. Nice' },
@@ -19,6 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
+    console.log('createDb InMemoryDataService');
     return {heroes};
   }
 
@@ -28,6 +31,7 @@ export class InMemoryDataService implements InMemoryDbService {
   // if the heroes array is not empty, the method below returns the highest
   // hero id + 1.
   genId(heroes: Hero[]): number {
+      console.log('Data pull from InMemoryDataService');
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
   }
 }
