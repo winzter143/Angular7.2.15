@@ -18,8 +18,8 @@ const httpOptions = {
 
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';  // URL to web api
-
+  //private heroesUrl = 'api/heroes';  // Dummy web
+  private heroesUrl = 'http://192.168.2.121:8001/api/heroes';  // URL to web api
 
   //constructor() { }
   //constructor(private messageService: MessageService) { }

@@ -7,5 +7,21 @@
   </a>
 </div>
 
+<h3>Hearoes Emotoin</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4">
+    <input type="radio" name="emotions" value="{{hero.emotion}}" (click)="onSelect(hero)">
+    <label for="emotion">{{hero.name}} - {{hero.emotion}}</label>
 
+  </a>
+</div>
+
+<div *ngIf="selectedHero">
+<div [ngSwitch]="selectedHero.emotion">
+  <div *ngSwitchCase="'smiley'"> mr {{selectedHero.name}} signileng smiley </div>
+  <div *ngSwitchCase="'angry'"> mr {{selectedHero.name}} sons smash his car and very andry</div>
+  <div *ngSwitchCase="'healthy'" > mr {{selectedHero.name}} eat good foed make him healthylicious</div>
+  <div *ngSwitchDefault> mr {{selectedHero.name}} is {{selectedHero.emotion}}</div>
+</div>
+</div>
 <app-hero-search></app-hero-search>
